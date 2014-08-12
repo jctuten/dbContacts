@@ -6,6 +6,10 @@ CREATE TABLE [dbo].[tblContactDetails]
 [Telephone] [varchar] (50) COLLATE Latin1_General_CI_AS NULL,
 [Address] [varchar] (250) COLLATE Latin1_General_CI_AS NULL
 ) ON [PRIMARY]
+GO
+EXEC sp_addextendedproperty N'MS_Description', N'Indexed Primary Key', 'SCHEMA', N'dbo', 'TABLE', N'tblContactDetails', 'CONSTRAINT', N'PK_tblContactDetails'
+GO
+
 ALTER TABLE [dbo].[tblContactDetails] ADD 
 CONSTRAINT [PK_tblContactDetails] PRIMARY KEY CLUSTERED  ([ContactID]) ON [PRIMARY]
 GO
