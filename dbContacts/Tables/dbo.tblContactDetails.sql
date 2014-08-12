@@ -5,7 +5,8 @@ CREATE TABLE [dbo].[tblContactDetails]
 [Surname] [varchar] (50) COLLATE Latin1_General_CI_AS NULL,
 [Telephone] [varchar] (50) COLLATE Latin1_General_CI_AS NULL,
 [Address] [varchar] (250) COLLATE Latin1_General_CI_AS NULL,
-[FavColour] [int] NULL
+[FavColour] [int] NULL,
+[WorstColour] [int] NULL
 ) ON [PRIMARY]
 ALTER TABLE [dbo].[tblContactDetails] ADD
 CONSTRAINT [FK__tblContac__FavCo__06CD04F7] FOREIGN KEY ([FavColour]) REFERENCES [dbo].[tblColours] ([ColourID])
